@@ -8,7 +8,7 @@ const { adminMiddleware } = require('../controllers/auth')
 const { runValidation } = require('../validators');
 const { requestTagValidator, registerTagValidator } = require('../validators/tag');
 
-router.get('/requestTag', requestTag);
+router.get('/requestTag',requestTagValidator, runValidation, requestTag);
 router.post('/registertag', registerTag);
 
 router.get('/tag/list', list);
