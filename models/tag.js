@@ -13,10 +13,9 @@ const tagSchema = new mongoose.Schema(
             required: true,
             lowercase: true
         },
-        address: {
+        houseNumber: {
             type: String,
             required: true,
-            max: 32
         },
         id: {
             type: String,
