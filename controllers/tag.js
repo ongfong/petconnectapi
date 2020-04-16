@@ -7,9 +7,9 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 exports.requireTag = (req, res) => {
     let id = shortId.generate();
     let pin = shortId.generate();
-    const { name, email, houseNumber } = req.body;
+    const { name, email, houseNumber, village } = req.body;
 
-    let tag = new Tag({ name, email, houseNumber, id, pin});
+    let tag = new Tag({ name, email, houseNumber, village, id, pin});
 
         tag.save((err, data) => {
             if (err) {
