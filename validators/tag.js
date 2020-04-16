@@ -1,6 +1,6 @@
 const { check } = require('express-validator');
 
-exports.requireTagValidator = [
+exports.requestTagValidator = [
     check('name')
         .not()
         .isEmpty()
@@ -8,10 +8,26 @@ exports.requireTagValidator = [
     check('email')
         .isEmail()
         .withMessage('Must be a valid email address'),
-    check('address')
+    check('houseNumber')
         .not()
         .isEmpty()
-        .withMessage('Address is required'),
+        .withMessage('House number is required'),
+    check('district')
+        .not()
+        .isEmpty()
+        .withMessage('District is required'),
+    check('zone')
+        .not()
+        .isEmpty()
+        .withMessage('Zone is required'),
+    check('province')
+        .not()
+        .isEmpty()
+        .withMessage('Province is required'),
+    check('postalCode')
+        .not()
+        .isEmpty()
+        .withMessage('Postal Code is required'),
 ];
 
 exports.registerTagValidator = [

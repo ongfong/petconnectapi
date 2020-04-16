@@ -13,10 +13,34 @@ const tagSchema = new mongoose.Schema(
             required: true,
             lowercase: true
         },
-        address: {
+        houseNumber:{
             type: String,
-            required: true,
-            max: 32
+            required: true
+        },
+        village: {
+            type: String,
+        },
+        road: {
+            type: String,
+        },
+        alley: {
+            type: String, 
+        },
+        district: {
+            type: String,
+            required: true
+        },
+        zone: {
+            type: String,
+            required: true
+        },
+        province: {
+            type: String,
+            required: true
+        },
+        postalCode: {
+            type: String,
+            required: true
         },
         id: {
             type: String,

@@ -4,12 +4,14 @@ const User = require('../models/user');
 const sgMail = require('@sendgrid/mail'); //SENDGRID_API_KEY
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-exports.requireTag = (req, res) => {
+exports.requestTag = (req, res) => {
+ 
     let id = shortId.generate();
     let pin = shortId.generate();
-    const { name , email , address } = req.body;
+    const { name, email, houseNumber, village, road, alley, district, zone, province, postalCode } = req.body;
 
-    let tag = new Tag({ name, email, address, id, pin});
+    let tag = new Tag({ name, email, houseNumber, village, road, alley, district, 
+        zone, province, postalCode, id, pin});
 
         tag.save((err, data) => {
             if (err) {
@@ -101,6 +103,7 @@ exports.list = (req, res) => {
             res.json(tags);
         });
 };
+
 
 
 

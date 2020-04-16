@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 //controllers
-const { requireTag , registerTag, list, photo } = require('../controllers/tag');
+const { requestTag , registerTag, list, photo } = require('../controllers/tag');
 const { adminMiddleware } = require('../controllers/auth')
 // validators
 const { runValidation } = require('../validators');
-const { requireTagValidator, registerTagValidator } = require('../validators/tag');
+const { requestTagValidator, registerTagValidator } = require('../validators/tag');
 
-router.post('/requiretag', requireTagValidator, runValidation, requireTag);
+router.get('/requestTag', requestTag);
 router.post('/registertag', registerTag);
 
 router.get('/tag/list', list);
