@@ -22,7 +22,6 @@ const tagSchema = new mongoose.Schema(
         },
         road:{
             type: String,
-            required: true
         },
         alley: {
             type: String,
