@@ -8,7 +8,11 @@ exports.requireTagValidator = [
     check('email')
         .isEmail()
         .withMessage('Must be a valid email address'),
+<<<<<<< HEAD
     check('houseNumber')
+=======
+   check('houseNumber')
+>>>>>>> 295f55222062516e27a15e9d2ba1a55b997c214e
         .not()
         .isEmpty()
         .withMessage('House number is required'),
@@ -27,7 +31,11 @@ exports.requireTagValidator = [
     check('postalCode')
         .not()
         .isEmpty()
+<<<<<<< HEAD
         .withMessage('postal Code is required'),
+=======
+        .withMessage('postal Code is required')
+>>>>>>> 295f55222062516e27a15e9d2ba1a55b997c214e
 ];
 
 exports.registerTagValidator = [
