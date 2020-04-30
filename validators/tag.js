@@ -8,10 +8,26 @@ exports.requireTagValidator = [
     check('email')
         .isEmail()
         .withMessage('Must be a valid email address'),
-    check('address')
+   check('houseNumber')
         .not()
         .isEmpty()
-        .withMessage('Address is required'),
+        .withMessage('House number is required'),
+    check('district')
+        .not()
+        .isEmpty()
+        .withMessage('district is required'),
+    check('zone')
+        .not()
+        .isEmpty()
+        .withMessage('zone is required'),
+    check('province')
+        .not()
+        .isEmpty()
+        .withMessage('zone is province'),
+    check('postalCode')
+        .not()
+        .isEmpty()
+        .withMessage('postal Code is required')
 ];
 
 exports.registerTagValidator = [
