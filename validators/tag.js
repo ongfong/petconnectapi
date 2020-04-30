@@ -15,19 +15,7 @@ exports.requireTagValidator = [
     check('district')
         .not()
         .isEmpty()
-        .withMessage('district is required'),
-    check('zone')
-        .not()
-        .isEmpty()
-        .withMessage('zone is required'),
-    check('province')
-        .not()
-        .isEmpty()
-        .withMessage('zone is province'),
-    check('postalCode')
-        .not()
-        .isEmpty()
-        .withMessage('postal Code is required'),
+        .withMessage('district is required')
 ];
 
 exports.registerTagValidator = [
