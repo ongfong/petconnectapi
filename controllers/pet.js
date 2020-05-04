@@ -18,7 +18,7 @@ exports.create = (req, res) => {
             });
         }
 
-        const { id, pin, categories, name, gender } = fields;
+        const { id, pin, categories, name } = fields;
 
         if (!categories || categories.length === 0) {
             return res.status(400).json({
@@ -30,7 +30,6 @@ exports.create = (req, res) => {
         pet.id = id;
         pet.pin = pin;
         pet.name = name;
-        pet.gender = gender;
         pet.postedBy = req.user._id;
         
         // categories and tags
@@ -109,7 +108,7 @@ exports.read = (req, res) => {
     Pet.findOne({ id })
         .populate('categories', '_id name slug')
         .populate('postedBy', '_id name email ')
-        .select('_id id name categories postedBy createdAt updatedAt role profile breed age blood weight')
+        .select('_id id name gender categories postedBy createdAt updatedAt role profile breed age blood weight')
         .exec((err, data) => {
             if (err) {
                 return res.json({
@@ -142,7 +141,7 @@ exports.profile = (req, res) => {
         // .select("-photo")
         .populate('categories', '_id name slug')
         .populate('postedBy', '_id name email phone')
-        .select('_id id name categories postedBy createdAt updatedAt role profile breed age blood weight')
+        .select('_id id name categories postedBy createdAt updatedAt role profile breed age blood weight gender')
         .exec((err, data) => {
             if (err) {
                 return res.json({
@@ -290,5 +289,4 @@ exports.listLostPets = ( rea, res) => {
         res.json(pet);
     })
 };
-
 

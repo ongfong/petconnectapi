@@ -22,10 +22,6 @@ const petSchema = new mongoose.Schema(
             trim: true,
             required: true
         },
-        gender: {
-            type: String,
-            required: true
-        },
         breed:{
             type: String
         },
@@ -54,6 +50,10 @@ const petSchema = new mongoose.Schema(
         lost:{
             type: Number,
             default: 0
+        },
+        gender: {
+            type: String,
+            default: "Not specified"
         }
     },
     { timestamps: true }
