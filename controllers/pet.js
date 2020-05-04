@@ -18,7 +18,7 @@ exports.create = (req, res) => {
             });
         }
 
-        const { id, pin, categories, name } = fields;
+        const { id, pin, categories, name, gender } = fields;
 
         if (!categories || categories.length === 0) {
             return res.status(400).json({
@@ -30,6 +30,7 @@ exports.create = (req, res) => {
         pet.id = id;
         pet.pin = pin;
         pet.name = name;
+        pet.gender = gender;
         pet.postedBy = req.user._id;
         
         // categories and tags

@@ -22,6 +22,10 @@ const petSchema = new mongoose.Schema(
             trim: true,
             required: true
         },
+        gender: {
+            type: String,
+            required: true
+        },
         breed:{
             type: String
         },

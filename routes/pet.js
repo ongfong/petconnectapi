@@ -15,7 +15,7 @@ const {
 
 const { requireSignin, authMiddleware } = require('../controllers/auth');
 
-router.post('/pets', requireSignin, authMiddleware, create);
+router.post('/pets',  create);
 router.get('/pets/:user',list);
 router.get('/pets/lost/list', listLostPets);
 
