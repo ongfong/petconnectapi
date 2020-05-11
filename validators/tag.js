@@ -23,7 +23,7 @@ exports.requireTagValidator = [
     check('province')
         .not()
         .isEmpty()
-        .withMessage('zone is province'),
+        .withMessage('province is required'),
     check('postalCode')
         .not()
         .isEmpty()
