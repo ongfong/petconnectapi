@@ -275,11 +275,11 @@ exports.find = ( req, res) => {
         });
     })
 };
-exports.listLostPets = ( rea, res) => {
+exports.listLostPets = ( req, res) => {
     Pet.find({'lost': '1'})
     .populate('categories', '_id name slug')
     .populate('postedBy', '_id name email phone')
-    .select('_id id name categories postedBy createdAt updatedAt role profile breed age blood weight lost')
+    .select('_id id name categories postedBy createdAt updatedAt role profile breed age blood weight lost gender')
     .exec(( err, pet) => {
         if(err){
             return res.status(400).json({
