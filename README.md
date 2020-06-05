@@ -3,6 +3,7 @@ Backend of petconnect web application
 # Getting Started
   - You should create node_modules file before Install.
   - You should have .env file and add these in you .env file
+  
     ```
     NODE_ENV=development
     APP_NAME=PETCONNECT
@@ -17,5 +18,6 @@ Backend of petconnect web application
     JWT_RESET_PASSWORD='you jwt reset password'
     GOOGLE_CLIENT_ID='you google client ID'
     ```
+    
 # Installing
 npm run dev
