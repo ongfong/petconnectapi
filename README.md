@@ -21,3 +21,6 @@ Backend of petconnect web application
     
 # Installing
 npm run dev
+
+# Authors
+ Puangporn Kowsamruang
