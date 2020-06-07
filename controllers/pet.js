@@ -95,7 +95,7 @@ exports.list = (req, res) => {
   Pet.find({postedBy: new ObjectId(user)})
     .populate('categories', '_id name slug')
     .populate('postedBy', '_id name username')
-    .select('_id id name categories postedBy createdAt updatedAt')
+    .select('_id id name categories postedBy createdAt updatedAt lost')
     .exec((err, data) => {
       if (err) {
         return res.json({
@@ -253,7 +253,7 @@ exports.lost = (req, res) => {
         error: errorHandler(err),
       });
     }
-    pet.lost = 1;
+    pet.lost = 'Lost';
     pet.save((err, result) => {
       if (err) {
         return res.status(400).json({
@@ -272,7 +272,7 @@ exports.find = (req, res) => {
         error: errorHandler(err),
       });
     }
-    pet.lost = 0;
+    pet.lost = 'Find';
     pet.save((err, result) => {
       if (err) {
         return res.status(400).json({
@@ -284,7 +284,7 @@ exports.find = (req, res) => {
   });
 };
 exports.listLostPets = (req, res) => {
-  Pet.find({lost: '1'})
+  Pet.find({lost: 'Lost'})
     .populate('categories', '_id name slug')
     .populate('postedBy', '_id name email phone')
     .select(

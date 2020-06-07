@@ -48,8 +48,8 @@ const petSchema = new mongoose.Schema(
       default: 0,
     },
     lost: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: 'Lost',
     },
     gender: {
       type: String,
