@@ -24,3 +24,4 @@ npm run dev
 
 # Authors
  Puangporn Kowsamruang
+ Theeranun Tongprasong
