@@ -49,7 +49,7 @@ const petSchema = new mongoose.Schema(
     },
     lost: {
       type: String,
-      default: 'Lost',
+      default: 'Live with me',
     },
     gender: {
       type: String,
