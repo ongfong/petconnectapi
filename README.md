@@ -23,4 +23,5 @@ Backend of petconnect web application
 npm run dev
 
 # Authors
- Puangporn Kowsamruang
+ Puangporn Kowsamruang,
+ Theeranun Tongprasong
