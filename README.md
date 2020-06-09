@@ -9,14 +9,14 @@ Backend of petconnect web application
     APP_NAME=PETCONNECT
     PORT=8000
     CLIENT_URL=http://localhost:3000
-    DATABASE_CLOUD='you database cloud in mongoDB'
-    DATABASE_LOCAL='you local host in mongoDB'
-    JWT_SECRET='you jwt_secret'
-    JWT_ACCOUNT_ACTIVATION='you JWT_ACCOUNT_ACTIVATION'
-    SENDGRID_API_KEY='you SENDGRID API KEY '
+    DATABASE_CLOUD='your database cloud in mongoDB'
+    DATABASE_LOCAL='your local host in mongoDB'
+    JWT_SECRET='your jwt_secret'
+    JWT_ACCOUNT_ACTIVATION='your JWT_ACCOUNT_ACTIVATION'
+    SENDGRID_API_KEY='your SENDGRID API KEY '
     EMAIL_FROM=petconnect@hotmail.com
-    JWT_RESET_PASSWORD='you jwt reset password'
-    GOOGLE_CLIENT_ID='you google client ID'
+    JWT_RESET_PASSWORD='your jwt reset password'
+    GOOGLE_CLIENT_ID='your google client ID'
     ```
     
 # Installing
